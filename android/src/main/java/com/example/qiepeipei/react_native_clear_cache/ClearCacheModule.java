@@ -36,9 +36,7 @@ public class ClearCacheModule extends ReactContextBaseJavaModule {
     public void getCacheSize(Callback callback){
         // 计算缓存大小
         long fileSize = 0;
-        File filesDir = getReactApplicationContext().getFilesDir();// /data/data/package_name/files
         File cacheDir = getReactApplicationContext().getCacheDir();// /data/data/package_name/cache
-        fileSize += getDirSize(filesDir);
         fileSize += getDirSize(cacheDir);
         // 2.2版本才有将应用缓存转移到sd卡的功能
         if(isMethodsCompat(android.os.Build.VERSION_CODES.FROYO)){
@@ -198,7 +196,6 @@ public class ClearCacheModule extends ReactContextBaseJavaModule {
         getReactApplicationContext().deleteDatabase("webviewCache.db-shm");
         getReactApplicationContext().deleteDatabase("webviewCache.db-wal");
         //清除数据缓存
-        clearCacheFolder(getReactApplicationContext().getFilesDir(),System.currentTimeMillis());
         clearCacheFolder(getReactApplicationContext().getCacheDir(),System.currentTimeMillis());
         //2.2版本才有将应用缓存转移到sd卡的功能
         if(isMethodsCompat(android.os.Build.VERSION_CODES.FROYO)){
