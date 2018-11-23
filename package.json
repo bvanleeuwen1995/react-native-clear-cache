@@ -1,0 +1,19 @@
+{
+  "name": "react-native-clear-cache",
+  "version": "1.0.0",
+  "description": "react native 清除缓存第三方库 ![Mou icon1](/assets/a1.gif) ### 导出方法 - `getCacheSize` - 获取缓存大小     - `@callBack` - Function - 回调函数         - `@cacheSize` - String - 缓存大小         - `@unit` - String - 缓存大小单位(B KB MB G)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bvanleeuwen1995/react-native-clear-cache.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvanleeuwen1995/react-native-clear-cache/issues"
+  },
+  "homepage": "https://github.com/bvanleeuwen1995/react-native-clear-cache#readme"
+}
